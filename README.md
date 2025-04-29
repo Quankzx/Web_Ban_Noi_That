@@ -50,8 +50,8 @@ Một website hiện đại, tốc độ cao được xây dựng bằng **React
 ### 1. Clone dự án
 
 ```bash
-git clone https://github.com/your-username/noithat-quankz.git
-cd noithat-quankz
+git clone https://github.com/Quankzx/Web_Ban_Noi_That.git
+cd Web_Ban_Noi_That
 ```
 
 ### 2. Cài đặt thư viện
