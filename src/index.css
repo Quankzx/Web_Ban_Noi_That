@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-2lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-400 text-white hover:bg-primary-500 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 focus:ring-gray-300;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+  }
+
+  .input {
+    @apply rounded-2lg border border-gray-300 px-3 py-2 text-gray-800 shadow-sm focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .product-card {
+    @apply bg-white rounded-2lg shadow-soft overflow-hidden transition-transform hover:-translate-y-1;
+  }
+
+  .product-card-img {
+    @apply aspect-square w-full object-cover;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-primary-500 font-medium transition-colors;
+  }
+
+  .section {
+    @apply py-12 md:py-16;
+  }
+
+  .section-title {
+    @apply text-center mb-10;
+  }
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet-active {
+  @apply bg-primary-400 !important;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+  @apply text-primary-400 !important;
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mega Menu Animation */
+.mega-menu {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: top center;
+}
+
+.mega-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mega-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mega-menu-exit {
+  opacity: 1;
+}
+
+.mega-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}
